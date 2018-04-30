@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style type="text/css">
+
+div.c1{text-align:center}A{color:#000;font-weight:700;font-size:31px;text-decoration:underline;}A:hover{color:#F02060}
+
+</style>
+<title>Wii U Browser Exploit Examples</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta name="keywords" content="wii u, Cafiine, Loadiine, exploit, examples, kernel">
+<script type="text/javascript">function getpayload(e){var o=String(navigator.platform),r=navigator.appVersion,a=e;if("Nintendo WiiU"===o){a="p.php?sysver=550\u0026\p="+e+"code550.bin";var i=r.match("NX/(.*) NintendoBrowser/");if(2==i.length)if(versionNumber=i[1],"3.0.4.2.11"==versionNumber)a="p.php?sysver=550\u0026\p="+e+"code550.bin",location.href=a;else if("4.3.1.11264"==versionNumber)a="p.php?sysver=550\u0026\p="+e+"code550.bin",location.href=a;else if("3.0.4.2.9"==versionNumber)a="p.php?sysver=540\u0026\p="+e+"code532.bin",location.href=a;else if("3.0.4.2.13"==versionNumber)a="p.php?sysver=552\u0026\p="+e+"code550.bin",location.href=a;else if("3.0.3.12.15"==versionNumber)a=e+"payload532.html";else if("3.0.3.12.14"==versionNumber)a=e+"payload500.html";else if("3.0.3.12.12"==versionNumber)a=e+"payload500.html";else if("3.0.3.12.11"==versionNumber)a=e+"payload410.html";else if("3.0.3.12.6"==versionNumber)a=e+"payload400.html";else if("2.1.0.10.9"==versionNumber){var l=new XMLHttpRequest;l.open("HEAD",e+"payload310.html",!1),l.send(),a=404!=l.status?e+"payload310.html":e+"payload300.html"}else"2.1.0.8.23"==versionNumber?a=e+"payload210.html":"2.1.0.8.21"==versionNumber&&(a=e+"payload200.html")}location.href=a}</script>
+<style>@media print {#ghostery-purple-box {display:none !important}}</style></head>
+<body>
+
+
+
+
+
+
+
+
+
+<div class="c1">
+<a href="http://patorjk.com/games/snake/">Snake</a><br>
+&nbsp;</div>
+<div class="c1">
+<a href="Games/Breakout.html">Breakout</a><br>
+&nbsp;</div>
+
+</body></html>
